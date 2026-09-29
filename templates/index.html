@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        ComicCraft - AI Comic Creator
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="page-shell">
+
+    <section class="hero">
+
+        <div class="badge">
+            AI COMIC CREATOR
+        </div>
+
+        <h1>
+            ComicCraft
+        </h1>
+
+        <p>
+            Turn your imagination into a
+            five-panel comic story with
+            AI-generated storytelling,
+            dialogue, illustrations and PDF export.
+        </p>
+
+    </section>
+
+
+    <section class="card">
+
+        <form
+            action="/generate"
+            method="post"
+            id="comic-form"
+        >
+
+            <label for="story_prompt">
+                Story Prompt
+            </label>
+
+            <textarea
+                id="story_prompt"
+                name="story_prompt"
+                rows="5"
+                required
+                placeholder="Example: A brave fox exploring an enchanted forest."
+            ></textarea>
+
+
+            <div class="grid">
+
+
+                <div>
+
+                    <label for="character_name">
+                        Main Character Name
+                    </label>
+
+                    <input
+                        id="character_name"
+                        name="character_name"
+                        required
+                        placeholder="Ravi"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label for="setting">
+                        Setting
+                    </label>
+
+                    <select
+                        id="setting"
+                        name="setting"
+                    >
+
+                        <option>
+                            Forest
+                        </option>
+
+                        <option>
+                            School
+                        </option>
+
+                        <option>
+                            City
+                        </option>
+
+                        <option>
+                            Space
+                        </option>
+
+                        <option>
+                            Beach
+                        </option>
+
+                        <option>
+                            Enchanted Kingdom
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label for="tone">
+                        Story Tone
+                    </label>
+
+                    <select
+                        id="tone"
+                        name="tone"
+                    >
+
+                        <option>
+                            Light-hearted
+                        </option>
+
+                        <option>
+                            Dramatic
+                        </option>
+
+                        <option>
+                            Poetic
+                        </option>
+
+                        <option>
+                            Funny
+                        </option>
+
+                        <option>
+                            Adventurous
+                        </option>
+
+                        <option>
+                            Mysterious
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label for="art_style">
+                        Art Style
+                    </label>
+
+                    <select
+                        id="art_style"
+                        name="art_style"
+                    >
+
+                        <option>
+                            Comic book
+                        </option>
+
+                        <option>
+                            Anime
+                        </option>
+
+                        <option>
+                            Pixel art
+                        </option>
+
+                        <option>
+                            Realistic
+                        </option>
+
+                        <option>
+                            Watercolor
+                        </option>
+
+                        <option>
+                            Graphic novel
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="primary-btn"
+                id="generate-btn"
+            >
+
+                ✨ Generate My Comic
+
+            </button>
+
+
+            <p class="hint">
+
+                Generation can take some time.
+
+            </p>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<script
+    src="/static/js/app.js"
+></script>
+
+
+</body>
+
+</html>

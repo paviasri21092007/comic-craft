@@ -1,0 +1,557 @@
+* {
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #171717;
+
+    background: #f4f0e8;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(255,255,255,.95),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #f8f5ee,
+            #e8edf4
+        );
+}
+
+
+.page-shell {
+
+    width:
+        min(
+            1050px,
+            calc(100% - 32px)
+        );
+
+    margin: 0 auto;
+
+    padding: 55px 0;
+}
+
+
+.page-shell.wide {
+
+    width:
+        min(
+            1180px,
+            calc(100% - 28px)
+        );
+}
+
+
+.hero {
+
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: .14em;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    background: #171717;
+
+    color: #fff;
+}
+
+
+.hero h1,
+.preview-header h1 {
+
+    font-size:
+        clamp(
+            42px,
+            7vw,
+            72px
+        );
+
+    margin:
+        14px 0 5px;
+
+    line-height: .95;
+}
+
+
+.hero p,
+.preview-header p {
+
+    max-width: 700px;
+
+    margin: 15px auto;
+
+    color: #5b5b5b;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+.card,
+.comic-panel,
+.download-card,
+.success-card,
+.error-card {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .9
+        );
+
+    border:
+        1px solid
+        rgba(
+            20,
+            20,
+            20,
+            .09
+        );
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 18px 50px
+        rgba(
+            40,
+            40,
+            40,
+            .10
+        );
+}
+
+
+.card {
+
+    padding: 30px;
+}
+
+
+label {
+
+    display: block;
+
+    font-weight: 800;
+
+    margin:
+        0 0 8px;
+}
+
+
+input,
+textarea,
+select {
+
+    width: 100%;
+
+    border:
+        1px solid #d5d5d5;
+
+    border-radius: 13px;
+
+    padding: 13px 14px;
+
+    font: inherit;
+
+    background: #fff;
+
+    margin-bottom: 20px;
+
+    outline: none;
+}
+
+
+input:focus,
+textarea:focus,
+select:focus {
+
+    border-color: #222;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            0,
+            0,
+            0,
+            .06
+        );
+}
+
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 4px 18px;
+}
+
+
+.primary-btn,
+.secondary-btn {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+
+    border-radius: 13px;
+
+    padding: 13px 19px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    border: 0;
+
+    font-size: 15px;
+}
+
+
+.primary-btn {
+
+    width: 100%;
+
+    background: #171717;
+
+    color: #fff;
+}
+
+
+.secondary-btn {
+
+    background: #fff;
+
+    color: #171717;
+
+    border:
+        1px solid #d5d5d5;
+}
+
+
+.primary-btn:hover,
+.secondary-btn:hover {
+
+    transform:
+        translateY(-1px);
+}
+
+
+.hint {
+
+    color: #777;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+.preview-header {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        flex-start;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+
+.preview-header p {
+
+    margin-left: 0;
+}
+
+
+.comic-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+.comic-panel {
+
+    overflow: hidden;
+}
+
+
+.comic-panel img {
+
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    background: #eee;
+}
+
+
+.panel-title {
+
+    padding:
+        20px 20px 8px;
+}
+
+
+.panel-title span {
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+
+    font-weight: 900;
+
+    color: #777;
+}
+
+
+.panel-title h2 {
+
+    margin:
+        5px 0 0;
+}
+
+
+.scene,
+.story-block,
+.dialogue {
+
+    padding:
+        0 20px;
+}
+
+
+.scene {
+
+    color: #666;
+
+    line-height: 1.5;
+}
+
+
+.story-block {
+
+    margin:
+        15px 0;
+}
+
+
+.story-block strong,
+.dialogue strong {
+
+    display: block;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .1em;
+}
+
+
+.story-block p,
+.dialogue p {
+
+    line-height: 1.55;
+}
+
+
+.dialogue {
+
+    margin:
+        15px 20px 22px;
+
+    padding:
+        13px 15px;
+
+    border-radius: 14px;
+
+    background: #f2f2f2;
+}
+
+
+.download-card {
+
+    margin-top: 28px;
+
+    padding: 28px;
+
+    text-align: center;
+}
+
+
+.inline-btn {
+
+    width: auto;
+}
+
+
+.text-link {
+
+    display: inline-block;
+
+    margin-left: 14px;
+
+    color: #333;
+
+    font-weight: 700;
+}
+
+
+.center-page {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 24px;
+}
+
+
+.success-card,
+.error-card {
+
+    width:
+        min(
+            600px,
+            100%
+        );
+
+    text-align: center;
+
+    padding: 45px;
+}
+
+
+.success-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: auto;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #171717;
+
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: 900;
+}
+
+
+.error-card {
+
+    border-color:
+        #e0bcbc;
+}
+
+
+@media (max-width: 760px) {
+
+    .grid,
+    .comic-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .preview-header {
+
+        flex-direction:
+            column;
+    }
+
+
+    .card {
+
+        padding: 20px;
+    }
+
+
+    .primary-btn.inline-btn,
+    .secondary-btn {
+
+        width: 100%;
+    }
+
+
+    .text-link {
+
+        margin:
+            15px 0 0;
+    }
+
+}
